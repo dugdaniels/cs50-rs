@@ -7,5 +7,5 @@ fn main() {
         .read_line(&mut input)
         .expect("Failed to read line");
 
-    println!("{}", input.to_lowercase())
+    println!("{}", input.trim().to_lowercase())
 }
