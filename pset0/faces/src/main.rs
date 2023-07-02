@@ -7,16 +7,7 @@ fn main() {
         .read_line(&mut input)
         .expect("Failed to read line");
 
-    let output = input
-        .trim()
-        .split_whitespace()
-        .map(|x| match x {
-            ":)" => "🙂",
-            ":(" => "🙁",
-            _ => x,
-        })
-        .collect::<Vec<_>>()
-        .join(" ");
+    let output = input.trim().replace(":)", "🙂").replace(":(", "🙁");
 
     println!("{}", output);
 }
